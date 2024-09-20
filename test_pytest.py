@@ -263,6 +263,48 @@ def test_update_experience():
 
     assert found, "Updated experience was not found in the returned list"
     
-    
-    
-    
+def test_update_education():
+    '''
+    Test the updating functionality of education
+    '''
+    # Post a new education
+    example_education = {
+        "course": "Engineering",
+        "school": "NYU",
+        "start_date": "October 2022",
+        "end_date": "August 2024",
+        "grade": "86%",
+        "logo": "example-logo.png"
+    }
+
+    updated_education = {
+        "course": "Computer Science",
+        "school": "UBC",
+        "start_date": "2022-01-01",
+        "end_date": "2023-01-01",
+        "grade": "90%",
+        "logo": "updated-logo-url"
+    }
+
+    # Post a new education
+    post_response = app.test_client().post('/resume/education', json=example_education)
+    assert post_response.status_code == 201
+    new_education_id = post_response.json['id']
+
+    # Update the education
+    update_response = app.test_client().put(f'/resume/education?index={new_education_id}',
+                                             json=updated_education)
+    assert update_response.status_code == 200
+
+    # Check if the education was updated correctly
+    get_response = app.test_client().get('/resume/education')
+    educations = get_response.json
+    found = False
+
+    for education in educations:
+        if education['id'] == new_education_id:
+            for key, value in updated_education.items():
+                assert education[key] == value
+            found = True
+            break
+    assert found, "Updated education was not found in the returned list"

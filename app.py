@@ -93,7 +93,7 @@ def experience():
     return jsonify({'error': 'Method not allowed'}), 405
 
 
-@app.route('/resume/education', methods=['GET', 'POST', 'DELETE'])
+@app.route('/resume/education', methods=['GET', 'POST', 'PUT', 'DELETE'])
 def education():
     """
     Handle education requests
@@ -147,6 +147,24 @@ def education():
 
         return jsonify({"error": 'Invalid Index'}), 400
     
+    if request.method == "PUT":
+        index = request.args.get("index")
+        # Check if index is provided and is a number
+        if index is None:
+            return jsonify({"error": 'Index not provided'}), 400
+        if not index.isnumeric():
+            return jsonify({"error": "Index must be a number"}), 400
+        
+        # Check if index is in range
+        index = int(index)
+        if not 0 < index <= len(data["education"]):
+            return jsonify({"error": 'Index not in range'}), 400
+        updated_education_data = request.json
+        updated_education_data['id'] = index
+        updated_education = Education(**updated_education_data)
+        data["education"][index - 1] = updated_education
+        save_data('data/data.json', data)
+        return jsonify(data["education"][index - 1]), 200
     return jsonify({'error': 'Method not allowed'}), 405
 
 
