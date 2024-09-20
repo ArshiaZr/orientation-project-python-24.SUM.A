@@ -89,6 +89,96 @@
             "description": "Updated description",
             "logo": "updated-logo-url",
             "id": 10
+        },
+        {
+            "title": "Software Developer",
+            "company": "A Cooler Company",
+            "start_date": "October 2022",
+            "end_date": "Present",
+            "description": "Writing JavaScript Code",
+            "logo": "example-logo.png",
+            "id": 11
+        },
+        {
+            "title": "Roblox Developer",
+            "company": "Roblox",
+            "start_date": "2022-01-01",
+            "end_date": "2023-01-01",
+            "description": "Updated description",
+            "logo": "updated-logo-url",
+            "id": 12
+        },
+        {
+            "title": "Software Developer",
+            "company": "A Cooler Company",
+            "start_date": "October 2022",
+            "end_date": "Present",
+            "description": "Writing JavaScript Code",
+            "logo": "example-logo.png",
+            "id": 13
+        },
+        {
+            "title": "Roblox Developer",
+            "company": "Roblox",
+            "start_date": "2022-01-01",
+            "end_date": "2023-01-01",
+            "description": "Updated description",
+            "logo": "updated-logo-url",
+            "id": 14
+        },
+        {
+            "title": "Software Developer",
+            "company": "A Cooler Company",
+            "start_date": "October 2022",
+            "end_date": "Present",
+            "description": "Writing JavaScript Code",
+            "logo": "example-logo.png",
+            "id": 15
+        },
+        {
+            "title": "Roblox Developer",
+            "company": "Roblox",
+            "start_date": "2022-01-01",
+            "end_date": "2023-01-01",
+            "description": "Updated description",
+            "logo": "updated-logo-url",
+            "id": 16
+        },
+        {
+            "title": "Software Developer",
+            "company": "A Cooler Company",
+            "start_date": "October 2022",
+            "end_date": "Present",
+            "description": "Writing JavaScript Code",
+            "logo": "example-logo.png",
+            "id": 17
+        },
+        {
+            "title": "Roblox Developer",
+            "company": "Roblox",
+            "start_date": "2022-01-01",
+            "end_date": "2023-01-01",
+            "description": "Updated description",
+            "logo": "updated-logo-url",
+            "id": 18
+        },
+        {
+            "title": "Software Developer",
+            "company": "A Cooler Company",
+            "start_date": "October 2022",
+            "end_date": "Present",
+            "description": "Writing JavaScript Code",
+            "logo": "example-logo.png",
+            "id": 19
+        },
+        {
+            "title": "Roblox Developer",
+            "company": "Roblox",
+            "start_date": "2022-01-01",
+            "end_date": "2023-01-01",
+            "description": "Updated description",
+            "logo": "updated-logo-url",
+            "id": 20
         }
     ],
     "education": [
@@ -154,23 +244,197 @@
             "grade": "90%",
             "logo": "updated-logo-url",
             "id": 7
+        },
+        {
+            "course": "Engineering",
+            "school": "NYU",
+            "start_date": "October 2022",
+            "end_date": "August 2024",
+            "grade": "86%",
+            "logo": "example-logo.png",
+            "id": 8
+        },
+        {
+            "course": "Computer Science",
+            "school": "UBC",
+            "start_date": "2022-01-01",
+            "end_date": "2023-01-01",
+            "grade": "90%",
+            "logo": "updated-logo-url",
+            "id": 9
+        },
+        {
+            "course": "Engineering",
+            "school": "NYU",
+            "start_date": "October 2022",
+            "end_date": "August 2024",
+            "grade": "86%",
+            "logo": "example-logo.png",
+            "id": 10
+        },
+        {
+            "course": "Computer Science",
+            "school": "UBC",
+            "start_date": "2022-01-01",
+            "end_date": "2023-01-01",
+            "grade": "90%",
+            "logo": "updated-logo-url",
+            "id": 11
+        },
+        {
+            "course": "Computer Science",
+            "school": "UBC",
+            "start_date": "2022-01-01",
+            "end_date": "2023-01-01",
+            "grade": "90%",
+            "logo": "updated-logo-url",
+            "id": 12
+        },
+        {
+            "course": "Computer Science",
+            "school": "UBC",
+            "start_date": "2022-01-01",
+            "end_date": "2023-01-01",
+            "grade": "90%",
+            "logo": "updated-logo-url",
+            "id": 13
+        },
+        {
+            "course": "Computer Science",
+            "school": "UBC",
+            "start_date": "2022-01-01",
+            "end_date": "2023-01-01",
+            "grade": "90%",
+            "logo": "updated-logo-url",
+            "id": 14
+        },
+        {
+            "course": "Computer Science",
+            "school": "UBC",
+            "start_date": "2022-01-01",
+            "end_date": "2023-01-01",
+            "grade": "90%",
+            "logo": "updated-logo-url",
+            "id": 15
+        },
+        {
+            "course": "Computer Science",
+            "school": "UBC",
+            "start_date": "2022-01-01",
+            "end_date": "2023-01-01",
+            "grade": "90%",
+            "logo": "updated-logo-url",
+            "id": 16
+        },
+        {
+            "course": "Engineering",
+            "school": "NYU",
+            "start_date": "October 2022",
+            "end_date": "August 2024",
+            "grade": "86%",
+            "logo": "example-logo.png",
+            "id": 17
+        },
+        {
+            "course": "Computer Science",
+            "school": "UBC",
+            "start_date": "2022-01-01",
+            "end_date": "2023-01-01",
+            "grade": "90%",
+            "logo": "updated-logo-url",
+            "id": 18
+        },
+        {
+            "course": "Engineering",
+            "school": "NYU",
+            "start_date": "October 2022",
+            "end_date": "August 2024",
+            "grade": "86%",
+            "logo": "example-logo.png",
+            "id": 19
+        },
+        {
+            "course": "Computer Science",
+            "school": "UBC",
+            "start_date": "2022-01-01",
+            "end_date": "2023-01-01",
+            "grade": "90%",
+            "logo": "updated-logo-url",
+            "id": 20
+        },
+        {
+            "course": "Engineering",
+            "school": "NYU",
+            "start_date": "October 2022",
+            "end_date": "August 2024",
+            "grade": "86%",
+            "logo": "example-logo.png",
+            "id": 21
+        },
+        {
+            "course": "Computer Science",
+            "school": "UBC",
+            "start_date": "2022-01-01",
+            "end_date": "2023-01-01",
+            "grade": "90%",
+            "logo": "updated-logo-url",
+            "id": 22
         }
     ],
     "skill": [
         {
-            "name": "Python",
-            "proficiency": "1-2 Years",
-            "logo": "example-logo.png"
-        },
-        {
-            "name": "Java",
-            "proficiency": "3 Years",
-            "logo": "example-logo.png"
-        },
-        {
+            "id": 1,
             "name": "JavaScript",
             "proficiency": "2-4 years",
             "logo": "example-logo.png"
+        },
+        {
+            "id": 1,
+            "name": "Python",
+            "proficiency": "3-5 years",
+            "logo": "updated-logo-url"
+        },
+        {
+            "id": 2,
+            "name": "Python",
+            "proficiency": "3-5 years",
+            "logo": "updated-logo-url"
+        },
+        {
+            "id": 3,
+            "name": "JavaScript",
+            "proficiency": "2-4 years",
+            "logo": "example-logo.png"
+        },
+        {
+            "id": 4,
+            "name": "Python",
+            "proficiency": "3-5 years",
+            "logo": "updated-logo-url"
+        },
+        {
+            "id": 5,
+            "name": "JavaScript",
+            "proficiency": "2-4 years",
+            "logo": "example-logo.png"
+        },
+        {
+            "id": 6,
+            "name": "Python",
+            "proficiency": "3-5 years",
+            "logo": "updated-logo-url"
+        },
+        {
+            "id": 7,
+            "name": "JavaScript",
+            "proficiency": "2-4 years",
+            "logo": "example-logo.png"
+        },
+        {
+            "id": 8,
+            "name": "Python",
+            "proficiency": "3-5 years",
+            "logo": "updated-logo-url"
         }
     ]
 }

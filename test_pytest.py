@@ -186,7 +186,13 @@ def test_skill():
                                      json=example_skill).json['id']
 
     response = app.test_client().get('/resume/skill')
-    assert response.json[item_id] == example_skill
+    check_skill = None
+    example_skill['id'] = item_id
+    for skill in response.json:
+        if skill['id'] == item_id:
+            check_skill = skill
+            break
+    assert check_skill == example_skill
 
 def test_delete_skill():
     '''
@@ -308,3 +314,42 @@ def test_update_education():
             found = True
             break
     assert found, "Updated education was not found in the returned list"
+
+def test_update_skill():
+    '''
+    Test the updating functionality of skill
+    '''
+    # Post a new skill
+    example_skill = {
+        "name": "JavaScript",
+        "proficiency": "2-4 years",
+        "logo": "example-logo.png"
+    }
+
+    updated_skill = {
+        "name": "Python",
+        "proficiency": "3-5 years",
+        "logo": "updated-logo-url"
+    }
+
+    # Post a new skill
+    post_response = app.test_client().post('/resume/skill', json=example_skill)
+    assert post_response.status_code == 201
+    new_skill_id = post_response.json['id']
+
+    # Update the skill
+    update_response = app.test_client().put(f'/resume/skill?index={new_skill_id}', json=updated_skill)
+    assert update_response.status_code == 200
+
+    # Check if the skill was updated correctly
+    get_response = app.test_client().get('/resume/skill')
+    skills = get_response.json
+    found = False
+
+    for skill in skills:
+        if skill['id'] == new_skill_id:
+            for key, value in updated_skill.items():
+                assert skill[key] == value
+            found = True
+            break
+    assert found, "Updated skill was not found in the returned list"

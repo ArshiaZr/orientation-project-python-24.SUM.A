@@ -168,7 +168,7 @@ def education():
     return jsonify({'error': 'Method not allowed'}), 405
 
 
-@app.route('/resume/skill', methods=['GET', 'POST', 'DELETE'])
+@app.route('/resume/skill', methods=['GET', 'POST', 'PUT', 'DELETE'])
 def skill():
     '''
     Handles Skill requests
@@ -195,10 +195,14 @@ def skill():
         if missing_fields:
             return jsonify({'error': 'Missing required fields'}), 400
 
-        data.get("skill").append(Skill(**request.json))
+        new_id = generate_id(data, 'skill')
+        new_skill_data = request.json
+        new_skill_data['id'] = new_id
+        new_skill = Skill(**new_skill_data)
+        data["skill"].append(new_skill)
         save_data('data/data.json', data)
 
-        return jsonify({'id': len(data.get("skill")) - 1}), 200
+        return jsonify({'id': new_id}), 201
 
     if request.method == 'DELETE':
         index = request.args.get("index")
@@ -216,6 +220,23 @@ def skill():
 
         return jsonify({"error": 'Invalid request'}), 400
 
+    if request.method == 'PUT':
+        index = request.args.get("index")
+        if index is None:
+            return jsonify({"error": 'Index not provided'}), 400
+        if not index.isnumeric():
+            return jsonify({"error": "Index must be a number"}), 400
+        
+        index = int(index)
+        if not 0 < index <= len(data["skill"]):
+            return jsonify({"error": 'Index not in range'}), 400
+        
+        updated_skill_data = request.json
+        updated_skill_data['id'] = index
+        updated_skill = Skill(**updated_skill_data)
+        data["skill"][index] = updated_skill
+        save_data('data/data.json', data)
+        return jsonify(data["skill"][index]), 200
     return jsonify({})
 
 

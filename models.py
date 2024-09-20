@@ -40,6 +40,7 @@ class Skill:
     '''
     Skill Class
     '''
-    name: str
-    proficiency: str
-    logo: str
+    id: int = field(default=1)
+    name: str = field(default="")
+    proficiency: str = field(default="")
+    logo: str = field(default="")
